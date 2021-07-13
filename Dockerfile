@@ -3,7 +3,7 @@ RUN apt-get update -y && apt-get upgrade -y && apt-get install git -y && apt-get
 WORKDIR /opt
 RUN wget https://mirrors.estointernet.in/apache/tomcat/tomcat-9/v9.0.50/bin/apache-tomcat-9.0.50-windows-x64.zip
 RUN  unzip apache-tomcat-9.0.50-windows-x64.zip
-RUN mv apache-tomcat-9.0.48 tomcat
+RUN mv apache-tomcat-9.0.50 tomcat
 RUN chmod -R 700 tomcat
 WORKDIR /opt
 RUN git clone https://github.com/prasad888/spring-framework-petclinic.git
