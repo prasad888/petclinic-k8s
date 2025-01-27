@@ -15,15 +15,19 @@ jobs:
         - name: Checkout Repository
           uses: actions/checkout@v4
 
-        - name: Install git 
-          run: brew install git
+        #- name: Install git 
+         # run: brew install git
         
-        - name: Install maven 
-          run: brew install maven
+        #- name: Install maven 
+         # run: brew install maven
         
         - name: implement package 
           run: mvn clean package 
         
         - name: list files 
-          run: cd target
+          run: cd /Users/runner/work/petclinic-k8s/petclinic-k8s/target
+
+        - name: list files 
+          run: cd ls -ltra
+
         
