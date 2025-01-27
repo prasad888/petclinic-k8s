@@ -25,5 +25,5 @@ jobs:
           run: mvn clean package 
         
         - name: list files 
-          run: ls -ltra
+          run: cd target
         
