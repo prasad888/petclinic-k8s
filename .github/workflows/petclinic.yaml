@@ -1,0 +1,29 @@
+name: petclinic Workflow
+
+on: 
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - 'feature/*'
+    
+jobs:
+    unit-testing:
+        name: petclinic
+        runs-on: macos-latest
+        steps:
+        - name: Checkout Repository
+          uses: actions/checkout@v4
+
+        - name: Install git 
+          run: brew install git
+        
+        - name: Install maven 
+          run: brew install maven
+        
+        - name: implement package 
+          run: mvn clean package 
+        
+        - name: list files 
+          run: ls -ltra
+        
