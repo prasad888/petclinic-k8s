@@ -44,8 +44,8 @@ jobs:
           run: |
             chmod +x tomcat.sh
             ./tomcat.sh
-        - name: change directory 
-          run: cd ..
+        #- name: change directory 
+          #run: cd ..
         - name: check patch 
           run: pwd
         - name: list
