@@ -53,6 +53,9 @@ jobs:
 
         - name: change directory 
           run: cd ..
+        - name: check patch 
+          run: pwd
+                      
 
 
           
