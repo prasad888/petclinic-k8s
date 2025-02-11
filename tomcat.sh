@@ -9,7 +9,7 @@ wget https://dlcdn.apache.org/tomcat/tomcat-11/v11.0.3/bin/apache-tomcat-11.0.3-
 
 #wget https://mirrors.estointernet.in/apache/tomcat/tomcat-9/v9.0.50/bin/apache-tomcat-9.0.50-windows-x64.zip
 unzip apache-tomcat-11.0.3-windows-x64.zip
-mv  apache-tomcat-9.0.50 tomcat
+mv  apache-tomcat-11.0.3 tomcat
 chmod -R 700 tomcat 
 cd tomcat/bin/
 ./startup.sh
