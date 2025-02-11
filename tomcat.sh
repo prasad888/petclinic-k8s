@@ -16,4 +16,5 @@ cd tomcat/bin/
  cd ..
  ls 
  cd webapps
- 
+ pwd
+ ls

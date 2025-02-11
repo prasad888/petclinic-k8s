@@ -22,11 +22,15 @@ jobs:
           run: |
             chmod +x petclinic-shell-script.sh
             ./petclinic-shell-script.sh
-        - name: sleep for 30 seconds
-          run: sleep 30
+        - name: uploading petclinic.war file 
+          uses: actions/upload-artifact@v4
+          with:
+            name: petclinic.war
+            path: /home/runner/work/petclinic-k8s/petclinic-k8s/target/petclinic.war
 
 
     deployment:
+        needs: unit-testing
         name: petclinic-deployment
         runs-on: ubuntu-latest
         steps:
@@ -40,5 +44,8 @@ jobs:
           run: |
             chmod +x tomcat.sh
             ./tomcat.sh
-        - name: sleep for 30 seconds
-          run: sleep 30
+        - name: download petclinic.war file 
+          uses: actions/download-artifact@v4
+          with:
+            name: petclinic.war
+          
