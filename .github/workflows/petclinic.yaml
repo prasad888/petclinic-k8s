@@ -48,6 +48,8 @@ jobs:
           run: cd ..
         - name: check patch 
           run: pwd
+        - name: list
+          run: ls
 
         - name: download petclinic.war file 
           uses: actions/download-artifact@v4
