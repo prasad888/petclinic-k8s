@@ -13,3 +13,5 @@ mv  apache-tomcat-11.0.3 tomcat
 chmod -R 700 tomcat 
 cd tomcat/bin/
 ./startup.sh
+pwd 
+ls
