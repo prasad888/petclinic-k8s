@@ -56,12 +56,10 @@ jobs:
         - name: list directory 
           run: pwd
 
-        - name: change directory 
-          run: cd ..
         - name: check patch 
           run: pwd
-        #- name: copy petclink war file in webapps 
-          #run: cp /home/runner/work/petclinic-k8s/petclinic-k8s
+        - name: copy petclink war file in webapps 
+          run: cp /home/runner/work/petclinic-k8s/petclinic-k8s/petclinic.war /home/runner/work/petclinic-k8s/petclinic-k8s/webapps
 
 
 
