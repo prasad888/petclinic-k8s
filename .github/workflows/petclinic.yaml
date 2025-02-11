@@ -1,4 +1,4 @@
-name: petclinic Workflow
+name: petclinic work
 
 on: 
   workflow_dispatch:
@@ -9,25 +9,36 @@ on:
     
 jobs:
     unit-testing:
-        name: petclinic
-        runs-on: macos-latest
+        name: petclinic 
+        runs-on: ubuntu-latest
         steps:
         - name: Checkout Repository
           uses: actions/checkout@v4
 
-        #- name: Install git 
-         # run: brew install git
-        
-        #- name: Install maven 
-         # run: brew install maven
-        
-        - name: implement package 
-          run: mvn clean package 
-        
-        - name: list files 
-          run: cd /Users/runner/work/petclinic-k8s/petclinic-k8s/target
+        - name: list repo files 
+          run: ls -ltra
 
-        - name: list files 
-          run: cd ls -ltra
+        - name: Executing shell script 
+          run: |
+            chmod +x petclinic-shell-script.sh
+            ./petclinic-shell-script.sh
+        - name: sleep for 30 seconds
+          run: sleep 30
 
-        
+
+    deployment:
+        name: petclinic-deployment
+        runs-on: ubuntu-latest
+        steps:
+        - name: Checkout Repository
+          uses: actions/checkout@v4
+
+        - name: list repo files 
+          run: ls -ltra
+
+        - name: Executing shell script 
+          run: |
+            chmod +x tomcat.sh
+            ./tomcat.sh
+        - name: sleep for 30 seconds
+          run: sleep 30
