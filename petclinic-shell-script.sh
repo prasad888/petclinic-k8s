@@ -7,4 +7,5 @@ ls -ltra
 pwd
 ls
 cd /home/runner/work/petclinic-k8s/petclinic-k8s/target
+ls
 
