@@ -60,6 +60,8 @@ jobs:
           run: pwd
         - name: copy petclink war file in webapps 
           run: cp /home/runner/work/petclinic-k8s/petclinic-k8s/petclinic.war /home/runner/work/petclinic-k8s/petclinic-k8s/webapps
+        - name: deployment check
+          run: /home/runner/work/petclinic-k8s/petclinic-k8s/webapps 
 
 
 
