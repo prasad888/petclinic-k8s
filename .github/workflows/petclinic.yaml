@@ -59,7 +59,7 @@ jobs:
         - name: deployment check
           run: cd /opt/tomcat/webapps
         - name: check files
-          run: ls
+          run: pwd
 
 
 
