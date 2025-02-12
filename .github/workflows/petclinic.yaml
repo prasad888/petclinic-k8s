@@ -56,8 +56,12 @@ jobs:
           run: pwd
         - name: copy petclink war file in webapps 
           run: cp /home/runner/work/petclinic-k8s/petclinic-k8s/petclinic.war /opt/tomcat/webapps
+          
         - name: deployment check
-          run: cd /opt/tomcat/webapps
+          run: | 
+            chmod +x deployment check.sh
+            ./deployment check.sh
+            
         - name: check files
           run: pwd
 
