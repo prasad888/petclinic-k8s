@@ -59,9 +59,9 @@ jobs:
           
         - name: deployment check
           run: | 
-            chmod +x deployment check.sh
-            ./deployment check.sh
-            
+            chmod +x deployment-check.sh
+            ./deployment-check.sh
+
         - name: check files
           run: pwd
 
