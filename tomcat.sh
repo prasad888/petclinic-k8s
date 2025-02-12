@@ -19,3 +19,7 @@ cd tomcat/bin/
  cd webapps
  pwd
  ls
+ cp /home/runner/work/petclinic-k8s/petclinic-k8s/petclinic.war /opt/tomcat/webapps
+ cd webapps
+ pwd
+ ls

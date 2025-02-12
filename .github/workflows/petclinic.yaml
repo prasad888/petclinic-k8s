@@ -39,12 +39,7 @@ jobs:
 
         - name: list repo files 
           run: ls -ltra
-
-        - name: Executing shell script 
-          run: |
-            chmod +x tomcat.sh
-            ./tomcat.sh
-
+          
         - name: download petclinic.war file 
           uses: actions/download-artifact@v4
           with:
@@ -54,16 +49,14 @@ jobs:
 
         - name: check path
           run: pwd
-        - name: copy petclink war file in webapps 
-          run: cp /home/runner/work/petclinic-k8s/petclinic-k8s/petclinic.war /opt/tomcat/webapps
-          
-        - name: deployment check
-          run: | 
-            chmod +x deployment-check.sh
-            ./deployment-check.sh
 
-        - name: check files
-          run: pwd
+        - name: Executing shell script 
+          run: |
+            chmod +x tomcat.sh
+            ./tomcat.sh
+
+       # - name: copy petclink war file in webapps 
+          #run: cp /home/runner/work/petclinic-k8s/petclinic-k8s/petclinic.war /opt/tomcat/webapps
 
 
 
